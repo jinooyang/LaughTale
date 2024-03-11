@@ -1,3 +1,3 @@
-const ChapterRead = () => {}
+const Viewer = () => {return <div></div>}
 
-export default ChapterRead;
+export default Viewer;

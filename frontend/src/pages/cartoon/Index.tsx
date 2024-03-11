@@ -1,3 +1,3 @@
-const CartoonChapter = () => {}
+const Index = () => {return <div></div>}
 
-export default CartoonChapter;
+export default Index;
