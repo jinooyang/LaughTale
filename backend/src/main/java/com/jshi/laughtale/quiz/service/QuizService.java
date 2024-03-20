@@ -1,4 +1,4 @@
-package com.jshi.laughtale.myquiz.service;
+package com.jshi.laughtale.quiz.service;
 
 import org.springframework.stereotype.Service;
 
