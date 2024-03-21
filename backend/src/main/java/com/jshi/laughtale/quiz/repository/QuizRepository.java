@@ -8,6 +8,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.jshi.laughtale.quiz.domain.Quiz;
 
 public interface QuizRepository extends JpaRepository<Quiz,Long> {
-	List<Quiz> findByMemberIdOOrderByProblemNoAsc(Long memberId);
+	List<Quiz> findByMemberIdOrderByProblemNoAsc(Long memberId);
 
 }
