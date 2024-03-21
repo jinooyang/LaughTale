@@ -1,8 +1,8 @@
-package com.jshi.laughtale.Dictionary.service;
+package com.jshi.laughtale.dictionary.service;
 
 import org.springframework.stereotype.Service;
 
-import com.jshi.laughtale.Dictionary.repository.DictionaryRepository;
+import com.jshi.laughtale.dictionary.repository.DictionaryRepository;
 
 import lombok.RequiredArgsConstructor;
 
