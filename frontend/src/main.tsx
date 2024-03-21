@@ -1,8 +1,3 @@
-import ReactDOM from 'react-dom/client'
-import { RouterProvider } from "react-router-dom";
-import router from "./routes";
-import "./index.css"
-import './styles/SliderStyles.css';
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <RouterProvider router={router} />
-);
+version https://git-lfs.github.com/spec/v1
+oid sha256:691f2004eac7bc7152fc8c99c14dd1a94007b336b7e7e9b2970bae0345ebf3a9
+size 627
