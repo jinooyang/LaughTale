@@ -1,20 +1,3 @@
-package com.jshi.laughtale.speech.service;
-
-import java.util.Optional;
-
-import org.springframework.stereotype.Service;
-
-import com.jshi.laughtale.speech.domain.Speech;
-import com.jshi.laughtale.speech.repository.SpeechRepository;
-
-import lombok.RequiredArgsConstructor;
-
-@Service
-@RequiredArgsConstructor
-public class SpeechService {
-	private final SpeechRepository speechRepository;
-
-	public Speech findById(Long id){
-		return speechRepository.findById(id).orElseThrow();
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f6026b206a4135ae905fdbf2799786959d7151dccdd40d7c180fcc32842a61f2
+size 2042

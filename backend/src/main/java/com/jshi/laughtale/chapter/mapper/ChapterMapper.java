@@ -1,18 +1,3 @@
-package com.jshi.laughtale.chapter.mapper;
-
-import com.jshi.laughtale.chapter.domain.Chapter;
-import com.jshi.laughtale.manga.domain.Manga;
-
-import java.util.ArrayList;
-
-public class ChapterMapper {
-
-    public static Chapter toEntity(Manga manga, int chapterNo, int pageCnt) {
-        return Chapter.builder()
-                .chapterNo(chapterNo)
-                .pageCnt(pageCnt)
-                .manga(manga)
-                .cuts(new ArrayList<>())
-                .build();
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:096a15478e6f3ca1d86a143d99657acab05a55311ab7f30931f887eb106881e5
+size 591
