@@ -1,7 +1,7 @@
 
 const useLocalStorage = (key) => {
     return {
-        set:(obj) => {
+        set:(obj: object) => {
             localStorage.setItem(key, JSON.stringify(obj));
         },
         get:() => {
