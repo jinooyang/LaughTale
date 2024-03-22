@@ -1,4 +1,4 @@
-import Logo from '/assets/logo.png';
+import Logo from '/src/assets/logo.png';
 
 const Header = () => {
     return <div className="bg-[rgba(23,23,26,0.40)] flex justify-center items-center">
