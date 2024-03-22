@@ -1,8 +1,8 @@
-package com.jshi.laughtale.dictionary.repository;
+package com.jshi.laughtale.Dictionary.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.jshi.laughtale.dictionary.domain.Dictionary;
+import com.jshi.laughtale.Dictionary.domain.Dictionary;
 
 public interface DictionaryRepository extends JpaRepository<Dictionary, Long> {
 
