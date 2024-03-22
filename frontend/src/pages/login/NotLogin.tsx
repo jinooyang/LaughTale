@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:05d9efc3aee54bb1866a4ea4dc35af7bab5e93fa617542c36be20bdd335b4912
-size 250
+
+
+
+// const url = "http://70.12.247.51:4000/oauth2/authorization/kakao"
+const url = "http://localhost:5173/login?accessToken=abcd";
+
+const NotLoginPage = () => {
+  return <div>
+    <a href={url} >로그인</a>
+  </div>
+}
+
+export default NotLoginPage;

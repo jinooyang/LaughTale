@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6f03e5a611158f21571276c3cb0ea8ea82af74a99d7c17def12f030ca1d14dd9
-size 69
+/* styles.css */
+.slick-list {
+    padding: 80px 15px !important;
+  }
