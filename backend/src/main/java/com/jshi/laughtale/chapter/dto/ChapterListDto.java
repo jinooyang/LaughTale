@@ -7,12 +7,7 @@ import lombok.Getter;
 
 public class ChapterListDto {
 
-	public static Response chpaterToChpterListDto(Chapter chapter) {
-		return Response.builder()
-			.chapterNo(chapter.getChapterNo())
-			.id(chapter.getId())
-			.build();
-	}
+
 
 	@Getter
 	@Builder
