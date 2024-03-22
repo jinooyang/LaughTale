@@ -13,6 +13,6 @@ public class SpeechDetail {
         private String title;
         private Integer chapterNo;
         private CutBasic.Response cut;
-        private PositionBasic positionBasic;
+        private PositionBasic.Response positionBasic;
     }
 }
