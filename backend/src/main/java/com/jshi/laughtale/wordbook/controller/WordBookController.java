@@ -1,14 +1,3 @@
-package com.jshi.laughtale.wordbook.controller;
-
-import com.jshi.laughtale.wordbook.service.WordBookService;
-import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-@RestController
-@RequestMapping("/api/wordbook")
-@RequiredArgsConstructor
-public class WordBookController {
-
-    private final WordBookService wordBookService;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6aae6f21952600f9b1ad94e81e142ba4d2b6a3e1871b860b6db87e3de1d77e38
+size 1221
