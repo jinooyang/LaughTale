@@ -1,14 +1,3 @@
-package com.jshi.laughtale.viewhistory.controller;
-
-import com.jshi.laughtale.viewhistory.service.ViewHistoryService;
-import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-@RestController
-@RequestMapping("/api/")
-@RequiredArgsConstructor
-public class  ViewHistoryController {
-
-    private final ViewHistoryService viewHistoryService;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6f1e600314db9b1035eb2f746408bc36f67f39c73606a7f107594a9013b7942f
+size 1149
