@@ -1,33 +1,3 @@
-export type Token = {
-    accessToken: string;
-    refreshToken: string;
-}
-
-export type Role = "USER" | "ANONYMOUS" | "ADMIN";
-
-export type User = {
-    id:number;
-    profile:string;
-    nickname: string;
-    role: Role;
-}
-
-export type Cartoon = {
-    id: number;
-    title:string;
-  thumbnail:string;
-  author:string;
-  summary:string;
-  level:number;
-}
-
-export type Chapter = {
-    id: number;
-    chapterNo: number;
-    level: number;
-    image: string;
-}
-
-export type ChapterList = Array<Chapter>
-
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:2bddc4d1934f1f35fe287064cee4cdc9c376917595bb73ca77e41229f336f48d
+size 537
