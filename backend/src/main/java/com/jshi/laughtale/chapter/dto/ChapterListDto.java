@@ -19,5 +19,6 @@ public class ChapterListDto {
 		private Long chapterId;
 		private Integer chapterNo;
 		private String thumbnail;
+		private Integer level;
 	}
 }
