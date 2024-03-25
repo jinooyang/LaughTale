@@ -18,6 +18,6 @@ public class ChapterListDto {
 	public static class Response {
 		private Long chapterId;
 		private Integer chapterNo;
-
+		private String thumbnail;
 	}
 }
