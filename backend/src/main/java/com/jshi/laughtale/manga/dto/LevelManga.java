@@ -1,20 +1,3 @@
-package com.jshi.laughtale.manga.dto;
-
-import lombok.Builder;
-import lombok.Getter;
-
-public class LevelManga {
-	@Getter
-	@Builder
-	public static class Request {
-
-	}
-
-	@Getter
-	@Builder
-	public static class Response {
-		private String thumbnail;
-		private String title;
-		private Integer level;
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9023d528d89a9e9de940dce9327784b58747883833b43211cc2cef67e15603ef
+size 377
