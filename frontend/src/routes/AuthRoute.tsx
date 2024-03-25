@@ -1,8 +1,6 @@
 import {useAuth} from "../stores/useAuth";
 import {Navigate, Outlet} from "react-router-dom";
 
-
-
 const AuthRoute = ({}) => {
   const {user} = useAuth();
 

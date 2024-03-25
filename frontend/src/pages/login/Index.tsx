@@ -1,15 +1,13 @@
 import {useSearchParams} from "react-router-dom";
 import LoginPostProcessComponent from "./LoginProcessComponent.tsx";
 import NotLoginPage from "./NotLogin.tsx";
+import {TOKEN_PARAMETER} from "../../constants/TokenParameter.ts";
+import {Suspense} from "react";
 
 
 const Login  = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
-  console.log(searchParams.get("accessToken"));
-  return <div>
-    {
-      searchParams.get("accessToken") ? <LoginPostProcessComponent accessToken={searchParams.get("accessToken")}/> :<NotLoginPage/>
-    }
-  </div>
+  const [searchParams, ] = useSearchParams();
+  return searchParams.get(TOKEN_PARAMETER) ? <LoginPostProcessComponent accessToken={searchParams.get(TOKEN_PARAMETER)}/>
+  :<NotLoginPage/>
 }
 export default Login;

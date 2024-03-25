@@ -6,7 +6,7 @@ const url = "http://localhost:5173/login?accessToken=abcd";
 
 const NotLoginPage = () => {
   return <div>
-    <a href={url} >로그인</a>
+    <a href={url} >Login</a>
   </div>
 }
 
