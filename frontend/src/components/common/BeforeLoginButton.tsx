@@ -1,11 +1,8 @@
-
-
+import KakaoLogo from '../../assets/kakao_logo.png';
 export default function BeforeLoginButton (){
   return(
-      <div className="">
-        <a href="https://j10a705.p.ssafy.io/oauth2/authorization/kakao">
-          로그인
-        </a>
-      </div>
+      <a href="https://j10a402.p.ssafy.io/oauth2/authorization/kakao">
+      <img src={KakaoLogo} className="w-[30px]"/>
+      </a>
   )
 }

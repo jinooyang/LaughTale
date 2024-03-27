@@ -4,5 +4,6 @@ import AfterLoginButton from "./AfterLoginButton.tsx";
 
 export default function AuthButton(){
   const {user, token} = useAuth();
-  return (user && token) ? <BeforeLoginButton/> : <AfterLoginButton/>
+  console.log(user ===null && token === null);
+  return (user ===null && token === null) ? <BeforeLoginButton/> : <AfterLoginButton/>
 }
