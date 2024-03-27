@@ -20,6 +20,7 @@ public class LevelManga {
 		private String thumbnail;
 		private String title;
 		private Integer level;
+		private Long id;
 
 	}
 }
