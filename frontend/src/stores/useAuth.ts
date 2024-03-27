@@ -1,18 +1,3 @@
-import { create } from "zustand"
-import {Token, User} from "../../types";
-type AuthState  ={
-    user : User
-    token: Token
-}
-
-type AuthAction  ={
-    setUser: (user: User) => void;
-}
-
-type AuthStore = AuthState & AuthAction;
-
-export const useAuth = create<AuthStore>((set) => ({
-    user: null,
-    token: null,
-    setUser: (user) => set(() => ({user})),
-}));
+version https://git-lfs.github.com/spec/v1
+oid sha256:7076dba20728c50b9d6c2d1c4f0e5ce363d84fbec8e3abbe17a5404b9dc5114f
+size 362
