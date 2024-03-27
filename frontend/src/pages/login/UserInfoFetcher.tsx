@@ -1,17 +1,3 @@
-import {useQuery, useSuspenseQuery} from "@tanstack/react-query";
-import {getMyInfo} from "../../apis/auth.ts";
-import {Navigate, Outlet} from "react-router-dom";
-import Spinner from "../../components/common/Spinner.tsx";
-type Props = {
-  accessToken?: string;
-}
-const UserInfoFetcher = (props : Props) => {
-  const {data} = useSuspenseQuery({
-    queryKey: ["auth"],
-    queryFn:() => getMyInfo({accessToken: props}),
-    retry: 0,
-  });
-
-  return <div>tset</div>;
-}
-export default UserInfoFetcher;
+version https://git-lfs.github.com/spec/v1
+oid sha256:4ac16730a3bf8adf2ab262fa1b1cd0527f30ccd1e95b008f0b397b3b8009b623
+size 977
