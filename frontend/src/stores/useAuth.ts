@@ -15,4 +15,4 @@ export const useAuth = create<AuthStore>((set) => ({
     user: null,
     token: null,
     setUser: (user) => set(() => ({user})),
-}));
+}))
