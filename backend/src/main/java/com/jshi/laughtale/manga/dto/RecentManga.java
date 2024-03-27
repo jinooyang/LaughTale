@@ -1,21 +1,3 @@
-package com.jshi.laughtale.manga.dto;
-
-import java.util.List;
-
-import lombok.Builder;
-import lombok.Getter;
-
-public class RecentManga {
-	@Getter
-	@Builder
-	public static class Request {
-
-	}
-
-	@Getter
-	@Builder
-	public static class Response {
-		private String thumbnail;
-		private String title;
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9edceffe9078c2638935ac28f0df5d60fff97af0a9207a16c38d77be0caf8496
+size 385
