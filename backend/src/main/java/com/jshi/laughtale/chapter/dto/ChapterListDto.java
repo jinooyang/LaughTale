@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:45bb66b0f57c7ffdee3406ed8d015ff88d4ae616956b9fcff4cba4ab6a7d4302
-size 339
+package com.jshi.laughtale.chapter.dto;
+
+import lombok.Builder;
+import lombok.Getter;
+
+public class ChapterListDto {
+
+
+
+	@Getter
+	@Builder
+	public static class Request {
+
+	}
+
+	@Getter
+	@Builder
+	public static class Response {
+		private Long chapterId;
+		private Integer chapterNo;
+		private String thumbnail;
+		private Integer level;
+	}
+}

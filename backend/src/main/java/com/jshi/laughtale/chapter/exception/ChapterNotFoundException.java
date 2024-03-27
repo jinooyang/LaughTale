@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b7a301be8898440942fe1c0ad9d37b8081a3a652eddaf6905b1727a9a451afbd
-size 295
+package com.jshi.laughtale.chapter.exception;
+
+import com.jshi.laughtale.common.BaseException;
+import com.jshi.laughtale.common.ErrorCode;
+
+public class ChapterNotFoundException extends BaseException {
+
+    public ChapterNotFoundException() {
+        super(ErrorCode.CHAPTER_NOT_FOUND);
+    }
+}
