@@ -1,6 +1,5 @@
 
-
-type Props {
+type Props = {
   message: string;
   statusCode: string;
 }
