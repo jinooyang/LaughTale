@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a95ac3d5085b61c77c0290c993e7138024611a9add57a6ab0b388adcd768f5e2
-size 599
+
+
+type Props = {
+  title:string;
+  thumbnail: string;
+  chapterNo: number;
+  chapterId: number;
+}
+export default function ChapterItem(props : Props){
+
+  return (
+    <div
+      className="bg-gradient-to-r from-[#747982] to-[#879099] text-white font-semibold text-xl flex p-5 items-center rounded-2xl mb-5">
+      <div className="w-[64px] rounded-xl overflow-hidden mr-5">
+        <img
+          src={props.thumbnail}/>
+      </div>
+      <div>{props.title} {props.chapterNo + 1}화</div>
+    </div>
+  )
+
+}
