@@ -1,24 +1,3 @@
-package com.jshi.laughtale.manga.dto;
-
-import lombok.Builder;
-import lombok.Getter;
-import lombok.ToString;
-
-import java.util.List;
-
-public class MangaAnalyze {
-
-    @Getter
-    @Builder
-    @ToString
-    public static class Request {
-        private String title;
-        private Integer chapterNo;
-        private String author;
-        private String category;
-        private String description;
-        private String thumbnail;
-        private List<String> filenames;
-    }
-}
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:f3d30ed198699793f433778a9e54fd55ddf1ddbc7253ab545e58c324f3e48051
+size 1092
