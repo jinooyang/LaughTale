@@ -1,10 +1,10 @@
 
 export type Token = {
     accessToken: string;
-    refreshToken: string;
+    refreshToken?: string;
 }
 
-export type Role = "USER" | "ANONYMOUS" | "ADMIN";
+export type Role = "USER" | "ANONYMOUS" | "ADMIN" | ROLE_NOT_CERTIFIED;
 
 export type User = {
     id:number;
@@ -12,4 +12,3 @@ export type User = {
     nickname: string;
     role: Role;
 }
-
