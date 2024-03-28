@@ -10,6 +10,5 @@ public class SpeechBasic {
     public static class Response {
         private Long id;
         private String sentence;
-        private String translate;
     }
 }
