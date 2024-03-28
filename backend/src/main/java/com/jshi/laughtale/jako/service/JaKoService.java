@@ -12,6 +12,6 @@ public class JaKoService {
     private final JaKoRepository jaKoRepository;
 
     public String loadWordMeaning(String from) {
-        return jaKoRepository.findByLangFrom(from).map(JaKo::getLangTo).orElse(null);
+        return jaKoRepository.findByLangFrom(from).map(JaKo::getParsedDef).orElse(null);
     }
 }
