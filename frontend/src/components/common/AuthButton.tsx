@@ -1,9 +1,9 @@
 import {useAuth} from "../../stores/useAuth.ts";
 import BeforeLoginButton from "./BeforeLoginButton.tsx";
 import AfterLoginButton from "./AfterLoginButton.tsx";
+import useAuthLocalStorage from "../../stores/useAuthLocalStorage.ts";
 
 export default function AuthButton(){
-  const {user, token} = useAuth();
-  console.log(user ===null && token === null);
-  return (user ===null && token === null) ? <BeforeLoginButton/> : <AfterLoginButton/>
+  const {token } = useAuth();
+  return token===null  ? <BeforeLoginButton/> : <AfterLoginButton/>
 }

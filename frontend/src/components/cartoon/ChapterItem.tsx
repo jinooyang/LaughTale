@@ -18,5 +18,4 @@ export default function ChapterItem(props : Props){
       <div>{props.title} {props.chapterNo + 1}화</div>
     </div>
   )
-
 }

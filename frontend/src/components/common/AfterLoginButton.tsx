@@ -1,14 +1,3 @@
-import {NavLink} from "react-router-dom";
-
-export default function AfterLoginButton() {
-  return (
-      <>
-      <div className="text-lg mr-3">
-        <NavLink to="/mypage">마이페이지</NavLink>
-      </div>
-
-      <div className="text-lg">
-        <NavLink to="/logout" >로그아웃</NavLink>
-      </div>
-  </>)
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6bec35820a80b33ee1d7a6a91f990c3b16b8b411dfd7acd520d9010612039c75
+size 570
