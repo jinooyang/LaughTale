@@ -9,6 +9,7 @@ import lombok.*;
 @Entity
 @Table(name = "jako")
 @Getter
+@Setter
 public class JaKo {
 
     @Id
@@ -18,4 +19,6 @@ public class JaKo {
     private String langFrom;
     @Column
     private String langTo;
+    @Column(columnDefinition = "TEXT")
+    private String parsedDef;
 }
