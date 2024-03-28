@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:af07e12c45c22b12a822970b7a22f5c88af193e3d97a4e05d38c621ce4caef56
-size 348
+package com.jshi.laughtale.viewhistory.dto;
+
+import java.util.List;
+
+import lombok.Builder;
+import lombok.Getter;
+
+public class ChapterHistoryDto {
+
+
+
+	@Getter
+	@Builder
+	public static class Request {
+
+	}
+
+	@Getter
+	@Builder
+	public static class Response {
+		private Long memberId;
+		private Long mangaId;
+		private List<Long> chaptersViewed;
+	}
+}

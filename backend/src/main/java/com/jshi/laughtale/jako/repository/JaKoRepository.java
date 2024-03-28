@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:977bcf69a1461d447c61c86a0d6b00ea17703cda90bf1bb6a165d1ea36e36386
-size 301
+package com.jshi.laughtale.jako.repository;
+
+import com.jshi.laughtale.jako.domain.JaKo;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+
+public interface JaKoRepository extends JpaRepository<JaKo, Integer> {
+    Optional<JaKo> findByLangFrom(String word);
+}

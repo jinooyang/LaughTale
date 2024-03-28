@@ -7,9 +7,9 @@ import lombok.Getter;
 
 public class QuizResult {
 	@Getter
-	@Builder
+
 	public static class Request {
-		private List<Integer> result;
+		private List<Integer> answer;
 	}
 
 	@Getter
