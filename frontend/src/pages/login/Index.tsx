@@ -1,6 +1,5 @@
 import {Navigate, useSearchParams} from "react-router-dom";
 import LoginPostProcessComponent from "./LoginProcessComponent.tsx";
-import NotLoginPage from "./NotLogin.tsx";
 import {TOKEN_PARAMETER} from "../../constants/TokenParameter.ts";
 
 

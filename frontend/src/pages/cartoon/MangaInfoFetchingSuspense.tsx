@@ -1,7 +1,4 @@
 import {ReactNode, Suspense} from "react";
-import MangaInfoFetcher from "./MangaInfoFetcher.tsx";
-import {ThemeProvider} from "@material-tailwind/react";
-import children = ThemeProvider.propTypes.children;
 
 type Props = {
   children: ReactNode;
