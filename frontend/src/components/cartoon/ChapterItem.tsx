@@ -1,21 +1,3 @@
-
-
-type Props = {
-  title:string;
-  thumbnail: string;
-  chapterNo: number;
-  chapterId: number;
-}
-export default function ChapterItem(props : Props){
-
-  return (
-    <div
-      className="bg-gradient-to-r from-[#747982] to-[#879099] text-white font-semibold text-xl flex p-5 items-center rounded-2xl mb-5">
-      <div className="w-[64px] rounded-xl overflow-hidden mr-5">
-        <img
-          src={props.thumbnail}/>
-      </div>
-      <div>{props.title} {props.chapterNo + 1}화</div>
-    </div>
-  )
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:822116340bd3ded730c36320faca1afb6d67b1b60110546c67c5e2175c2058d2
+size 708
