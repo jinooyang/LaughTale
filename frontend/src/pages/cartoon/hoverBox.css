@@ -1,5 +1,9 @@
 
 .hoverBox:hover {
     border:1px solid #333;
+}
 
+.cartoon_title_image {
+    all: unset;
+    width: 300px;
 }
