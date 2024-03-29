@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8bd8cfcd9778369d798ffc3a408e470e353120a3a2c5535de2df06e865454a9a
-size 370
+import {useAuth} from "../../stores/useAuth.ts";
+import BeforeLoginButton from "./BeforeLoginButton.tsx";
+import AfterLoginButton from "./AfterLoginButton.tsx";
+import useAuthLocalStorage from "../../stores/useAuthLocalStorage.ts";
+
+export default function AuthButton(){
+  const {token } = useAuth();
+  return token===null  ? <BeforeLoginButton/> : <AfterLoginButton/>
+}
