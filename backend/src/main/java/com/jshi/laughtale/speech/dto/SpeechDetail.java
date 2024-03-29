@@ -1,18 +1,3 @@
-package com.jshi.laughtale.speech.dto;
-
-import com.jshi.laughtale.cut.dto.CutBasic;
-import com.jshi.laughtale.position.dto.PositionBasic;
-import lombok.Builder;
-import lombok.Getter;
-
-public class SpeechDetail {
-
-    @Getter
-    @Builder
-    public static class Response {
-        private String title;
-        private Integer chapterNo;
-        private CutBasic.Response cut;
-        private PositionBasic.Response positionBasic;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5a774d68928e3747ea9c22ee389d8dba05b2e489f5d4739e5ee20b259742e579
+size 621
