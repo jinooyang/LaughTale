@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3065a795558809cd14a17034a95deb3f6397fd501643c4660c3ae3b48f135040
-size 369
+import {ReactNode} from "react";
+import {ThemeProvider} from "@material-tailwind/react";
+import children = ThemeProvider.propTypes.children;
+
+type Props = {
+  children: ReactNode;
+}
+export default function WordListWrapper(props:Props){
+  return <div className=" top-[15%]  sticky p-10 break-all overflow-auto" style={{maxHeight:"80vh"}}>
+    {props.children}
+  </div>
+}
