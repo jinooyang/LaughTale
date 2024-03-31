@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:724e964e480be17a1607a8be22be4f8ae80e3b7576572674d424ad1741f07c78
-size 299
+package com.jshi.laughtale.wordbook.exception;
+
+import com.jshi.laughtale.common.BaseException;
+import com.jshi.laughtale.common.ErrorCode;
+
+public class NotExistWordBookException extends BaseException {
+    public NotExistWordBookException() {
+        super(ErrorCode.NOT_EXIST_WORD_BOOK);
+    }
+}

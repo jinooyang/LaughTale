@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:73e15a27ec96499af2366e549cd44a2c1e13b8552d439699ac30f461ec7867f9
-size 293
+package com.jshi.laughtale.wordbook.exception;
+
+import com.jshi.laughtale.common.BaseException;
+import com.jshi.laughtale.common.ErrorCode;
+
+public class AlreadyExistWordBook extends BaseException {
+    public AlreadyExistWordBook() {
+        super(ErrorCode.ALREADY_EXIST_WORD_BOOK);
+    }
+}
