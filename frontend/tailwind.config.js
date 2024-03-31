@@ -4,8 +4,10 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],  theme: {
-    extend: {},
+    extend: {
+      zIndex: {
+        '1000': 1000,
+      }},
   },
   plugins: [require('tailwind-scrollbar-hide')],
 }
-
