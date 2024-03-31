@@ -8,5 +8,11 @@ public enum Attribute {
     //말풍선
     IDX, POS, SENTENCE, WORD_LIST,
     //단어
-    PO_SPEECH, VALUE
+    PO_SPEECH, VALUE;
+
+
+    @Override
+    public String toString() {
+        return name().toLowerCase();
+    }
 }
