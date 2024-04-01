@@ -8,7 +8,7 @@ public class ChapterPaginationDto {
     @Getter
     @Builder
     public static class Response {
-        private Integer nextPage;
-        private Integer prevPage;
+        private Long nextPage;
+        private Long prevPage;
     }
 }
