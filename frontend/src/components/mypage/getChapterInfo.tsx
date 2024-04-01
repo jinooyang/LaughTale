@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:469a4f8fc6bed7a6510bf0036a495dedc599b7be077161923c0845dbdcb4d32e
-size 393
+import client from "../../apis";
+
+const getChapterInfo = async (chapterId) => {
+    try {
+        const response = await client.get(`/chapter/${chapterId}`);
+        console.log("chapters 데이터", response.data);
+        return response.data;
+    } catch (error) {
+        console.error("API 호출 중 에러 발생:", error);
+        throw error;
+    }
+};
+export default getChapterInfo;
+

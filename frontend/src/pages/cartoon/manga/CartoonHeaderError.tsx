@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:adda414217ee0fb2f7e62c87e4e03161aa49cb4370972cf460d198461a9945e1
-size 470
+import Spinner from "../../../components/common/Spinner.tsx";
+
+type Props = {
+  type: "error" | "loading"
+}
+const CartoonHeaderSuspense = (props: Props) => {
+  return <>
+    <div
+      className="mt-6 flex rounded-3xl overflow-hidden bg-gradient-to-r from-[#64BEE2] from-5%  to-[#8395E8] to-100% h-[300px]  items-center justify-center">
+      {
+        props.type == "error" ? "에러 발생" : <Spinner/>
+      }
+    </div>
+  </>
+}
+export default CartoonHeaderSuspense;

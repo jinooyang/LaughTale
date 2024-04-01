@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:12f88061ea0a74f83e3e5cb8431b55cf9694c5be6dac6397f2d19bdac276b2c3
-size 230
+/* Tailwind CSS Scrollbar Styling */
+::-webkit-scrollbar {
+    @apply w-2;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-blue-500 hover:bg-blue-700;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+}
