@@ -1,10 +1,10 @@
-package com.jshi.laughtale.chapter.dto;
+package com.jshi.laughtale.common.dto;
 
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
-public class ChapterLevelCount {
+public class LevelCount {
 	@Getter
 	@Builder
 	@Setter
