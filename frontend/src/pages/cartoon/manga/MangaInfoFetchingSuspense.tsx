@@ -7,7 +7,7 @@ export default function MangaInfoFetchingSuspense({children} : Props){
   useEffect(() => {
     console.log("suspense")
   }, []);
-  return <Suspense fallback={<div className="h-[100px] bg-gray-600 text-white">loading</div>}>
+  return <Suspense fallback={<div className="h-[100px] bg-gray-600 text-black">loading</div>}>
     {children}
   </Suspense>
 }
