@@ -1,17 +1,3 @@
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],  theme: {
-    extend: {
-      zIndex: {
-        '1000': 1000,
-      },
-      fontSize: {
-        '10xl': '18rem', // 원하는 크기에 맞게 조정
-      },
-    },
-  },
-  plugins: [require('tailwind-scrollbar-hide')],
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:059882e02065eb64fc18292f9cacd17f6a1fc834fcaa1e6b28731dc06e258345
+size 864
