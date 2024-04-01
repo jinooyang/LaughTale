@@ -1,0 +1,19 @@
+.gradient-hr {
+    height: 2px;
+    border: none;
+    width: 75%;
+    margin-top :15px;
+    background-image: linear-gradient(to right, #34b3d7, #095790); /* Example gradient from red to blue */
+}
+
+
+.gradient-image{
+
+
+
+}
+
+.gradient-overlay {
+
+    background-image: linear-gradient(to right, rgba(0,0,0,1), rgba(255,255,255,0.5)); /* 그라데이션 색상 및 투명도 조정 가능 */
+}
