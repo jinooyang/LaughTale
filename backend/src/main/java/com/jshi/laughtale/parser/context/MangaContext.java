@@ -10,9 +10,9 @@ import lombok.Setter;
 @AllArgsConstructor
 @Builder
 @Getter
+@Setter
 public class MangaContext {
     private Manga manga;
-    @Setter
     private List<ChapterContext> chapterContexts;
 
 
