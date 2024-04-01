@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:265c6a8f02ebf37b05c829f624124843972028a0f25d59550fb9c505dff044f7
-size 367
+package com.jshi.laughtale.parser.context;
+
+import com.jshi.laughtale.manga.domain.Manga;
+import java.util.List;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
+
+@AllArgsConstructor
+@Builder
+@Getter
+@Setter
+public class MangaContext {
+    private Manga manga;
+    private List<ChapterContext> chapterContexts;
+
+
+}

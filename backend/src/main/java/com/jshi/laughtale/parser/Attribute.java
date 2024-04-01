@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:158245cad52ca5373b6e48f1feda087f94886aab926a6bbb726d204b6b92ba20
-size 343
+package com.jshi.laughtale.parser;
+
+public enum Attribute {
+    //만화
+    DESCRIPTION, GENRES, AUTHOR, THUMBNAIL, CHAPTER,
+    //컷
+    PAGE, SPEECH, SRC, SIZE,
+    //말풍선
+    IDX, POS, SENTENCE, WORD_LIST,
+    //단어
+    PO_SPEECH, VALUE;
+
+
+    @Override
+    public String toString() {
+        return name().toLowerCase();
+    }
+}
