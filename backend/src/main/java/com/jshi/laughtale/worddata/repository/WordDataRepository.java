@@ -1,18 +1,3 @@
-package com.jshi.laughtale.worddata.repository;
-
-
-import java.util.List;
-import java.util.Optional;
-
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.jshi.laughtale.worddata.domain.WordData;
-
-public interface WordDataRepository extends JpaRepository<WordData, Long> {
-	Optional<WordData> findByWord(String word);
-
-	Page<WordData> findAllByOrderByFrequencyDesc(Pageable pageable);
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:43770c8c1fba7fee5dbe40a8503fb7f390b828958019de2807fed8eeccb6c076
+size 646
