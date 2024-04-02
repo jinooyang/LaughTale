@@ -1,9 +1,13 @@
 import {useAuth} from "../stores/useAuth";
 import {Navigate, Outlet} from "react-router-dom";
+import {Role} from "../../types";
+type Props = {
+  roles: Array<Role>
+}
 
-const AuthRoute = () => {
-  const token = useAuth((state) => state.token);
+const AuthRoute = (props: Props) => {
+  const user = useAuth((state) => state.user);
 
-  return token ? <Outlet/> : <Navigate to="/login" />
+  return props.roles.includes(user?.role) ? <Outlet/> : <Navigate to="/login" />
 }
 export default AuthRoute;
