@@ -7,7 +7,6 @@ type Props = {
 
 const AuthRoute = (props: Props) => {
   const user = useAuth((state) => state.user);
-
-  return props.roles.includes(user?.role) ? <Outlet/> : <Navigate to="/login" />
+  return props?.roles.includes(user?.role) ? <Outlet/> : <Navigate to="/login" />
 }
 export default AuthRoute;
