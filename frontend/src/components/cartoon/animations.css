@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7aa344795b87f54ae8fa03b50514f711a3ff1d31a6380cead6dbc08442be5729
-size 299
+/* animations.css */
+@keyframes counting {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+        /*불투명하게 만들기 */
+    }
+    /*50% {*/
+    /*    transform: scale(0.5);*/
+    /*    opacity: 0.5;*/
+    /*}*/
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

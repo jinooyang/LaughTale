@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a8ccb98cb1bb0d9ebaa5c328d50b853e338b1e95e1ba108144a274dc54d8ad0d
-size 454
+import React from "react";
+import SpeechButton from "../common/SpeechButton.tsx";
+
+type Props = {
+  sentence: string
+  originSentence : string;
+}
+export default function Sentence(props: Props){
+  return <div className="sticky top-0 bg-white p-5 flex z-50">
+    <div dangerouslySetInnerHTML={{__html:props.sentence}} className="text-6xl text-black"></div>
+    <SpeechButton sentence={props.originSentence} style={{width:"5rem", display:"inline"}}/>
+  </div>;
+}

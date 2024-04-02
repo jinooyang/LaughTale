@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:10a47253d33f5142c8a76e4de4d9c37c1c9e1ebefa6075bfa9262841ce3c29b1
-size 323
+import numpy as np
+from PIL import Image
+
+
+def crop_image(img, blk_list):
+    img = np.array(img)
+    result = []
+    for ii, blk in enumerate(blk_list):
+        bx1, by1, bx2, by2 = blk.xyxy  # 말풍선의 좌상 xy 우하 xy
+        i = img[by1:by2, bx1:bx2]
+        result.append(Image.fromarray(i))
+    return result
+

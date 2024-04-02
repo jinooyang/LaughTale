@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:995aa07f4f9d534b054e1ffa389c6433a90f427798db7c270258ad8eb4ce95a7
-size 449
+import {Navigate, useSearchParams} from "react-router-dom";
+import LoginPostProcessComponent from "./LoginProcessComponent.tsx";
+import {TOKEN_PARAMETER} from "../../constants/TokenParameter.ts";
+
+
+const Login  = () => {
+  const [searchParams, ] = useSearchParams();
+ if(searchParams.get(TOKEN_PARAMETER)) return <LoginPostProcessComponent accessToken={searchParams.get(TOKEN_PARAMETER)}/>
+  return <Navigate to={`/home`} />
+ }
+export default Login;

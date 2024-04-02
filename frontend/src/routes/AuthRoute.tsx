@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1b3058db4ff384f84e115a9aa1b2ea08dcb19c8ff7039cd30aa2eefb174dcbda
-size 252
+import {useAuth} from "../stores/useAuth";
+import {Navigate, Outlet} from "react-router-dom";
+
+const AuthRoute = () => {
+  const token = useAuth((state) => state.token);
+
+  return token ? <Outlet/> : <Navigate to="/login" />
+}
+export default AuthRoute;
