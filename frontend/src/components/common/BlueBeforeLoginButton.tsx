@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:051418c714bca5a649c16568a87dbca5fc871d8085824f07394a8864d1a244d3
-size 367
+import KakaoLogo from '../../assets/kakao_logo.png';
+
+export default function BeforeLoginButton() {
+    return (
+        <a href="https://j10a705.p.ssafy.io/oauth2/authorization/kakao">
+            {/*<img src={KakaoLogo} className="w-[30px]"/>*/}
+            <div className=" text-center text-3xl hover:text-black">ログイン : 로그인</div>
+        </a>
+    )
+}
