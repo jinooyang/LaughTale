@@ -1,15 +1,3 @@
-import {useCallback} from "react";
-import {addWordList} from "../../apis/viewer.ts";
-
-type Props={
-  wordId: number
-}
-export const AddWordButton = (props: Props) => {
-  const onClick = useCallback(async () => {
-    const response = await addWordList(+ props.wordId);
-    console.log("add" , response)
-  }, [props.wordId]);
-  return (<button className="bg-blue-500 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded-full" onClick={onClick}>
-    추가
-    </button>)
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a0f5958a3b64dc4eaea13caf83db6088d3d45a0aba866cc75df1217de521db54
+size 474
