@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2497aacc9de0e94d5f8114cbf0167ab1c857d3ba096d2da7810ee353c090fbf4
-size 461
+package com.jshi.laughtale;
+
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@CrossOrigin("*")
+@RequestMapping("/api/health")
+public class HealthController {
+    @GetMapping("")
+    public String healthCheck() {
+        return "health OK";
+    }
+}

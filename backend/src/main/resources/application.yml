@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:68965de7ecdb19b0979bb8aa38cc08f114281740253129dca2d40f0bb468a305
-size 144
+server:
+  port: 4000
+
+spring:
+  config:
+    import:
+      - application-datasource.yml
+      - application-jwt.yml
+      - application-oauth.yml
