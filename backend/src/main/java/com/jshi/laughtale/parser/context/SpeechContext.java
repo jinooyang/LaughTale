@@ -1,18 +1,3 @@
-package com.jshi.laughtale.parser.context;
-
-import com.jshi.laughtale.speech.domain.Speech;
-import com.jshi.laughtale.worddata.domain.WordData;
-import java.util.List;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
-
-@AllArgsConstructor
-@Builder
-@Getter
-public class SpeechContext {
-    private Speech speech;
-    @Setter
-    private List<WordData> wordDataList;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9ed0c77f56ebf34bf56e10a0bd09002377b0c4364649a1a9b3113c18ffde0bb6
+size 418

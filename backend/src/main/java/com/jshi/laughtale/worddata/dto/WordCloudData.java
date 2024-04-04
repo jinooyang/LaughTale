@@ -1,14 +1,3 @@
-package com.jshi.laughtale.worddata.dto;
-
-import lombok.Builder;
-import lombok.Getter;
-
-public class WordCloudData {
-
-	@Getter
-	@Builder
-	public static class Response {
-		private String text;
-		private Integer value;
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:16c2445e59c469674d7a5d976da0eb192845baafd4a4acb3ea9b61601a0ea262
+size 246

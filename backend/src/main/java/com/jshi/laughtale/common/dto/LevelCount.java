@@ -1,15 +1,3 @@
-package com.jshi.laughtale.common.dto;
-
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
-
-public class LevelCount {
-	@Getter
-	@Builder
-	@Setter
-	public static class Response {
-		private int level;
-		private long count;
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0927a721492574e32a3428079e86f70f1399310a60c5e8b7da596a6bf8d25708
+size 269

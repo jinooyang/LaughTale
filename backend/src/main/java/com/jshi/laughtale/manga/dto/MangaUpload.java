@@ -1,21 +1,3 @@
-package com.jshi.laughtale.manga.dto;
-
-import lombok.Builder;
-import lombok.Getter;
-import lombok.ToString;
-import org.springframework.web.multipart.MultipartFile;
-
-import java.util.List;
-
-public class MangaUpload {
-
-    @Getter
-    @Builder
-    @ToString
-    public static class Request {
-        private String title;
-        private String author;
-        private String genres;
-        private String description;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1c33f8823b256b9053d102546b44741efcdb0d9191b065e90da1e701cff77669
+size 346
