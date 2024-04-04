@@ -7,3 +7,4 @@ spring:
       - application-datasource.yml
       - application-jwt.yml
       - application-oauth.yml
+      - application-file.yml
