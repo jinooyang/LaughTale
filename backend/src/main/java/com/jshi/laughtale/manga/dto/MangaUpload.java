@@ -3,9 +3,6 @@ package com.jshi.laughtale.manga.dto;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.ToString;
-import org.springframework.web.multipart.MultipartFile;
-
-import java.util.List;
 
 public class MangaUpload {
 

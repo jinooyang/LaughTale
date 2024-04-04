@@ -1,6 +1,6 @@
 package com.jshi.laughtale.common;
 
-public class BaseException extends RuntimeException{
+public class BaseException extends RuntimeException {
     private ErrorCode errorCode;
 
     public BaseException(ErrorCode errorCode) {
