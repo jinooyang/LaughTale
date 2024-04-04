@@ -1,6 +1,5 @@
 package com.jshi.laughtale.position.dto;
 
-import jakarta.persistence.Column;
 import lombok.Builder;
 import lombok.Getter;
 

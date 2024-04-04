@@ -5,11 +5,11 @@ import lombok.Getter;
 import lombok.Setter;
 
 public class LevelCount {
-	@Getter
-	@Builder
-	@Setter
-	public static class Response {
-		private int level;
-		private long count;
-	}
+    @Getter
+    @Builder
+    @Setter
+    public static class Response {
+        private int level;
+        private long count;
+    }
 }

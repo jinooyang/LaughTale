@@ -1,13 +1,11 @@
 package com.jshi.laughtale.quiz.repository;
 
-import java.util.List;
-import java.util.Optional;
-
+import com.jshi.laughtale.quiz.domain.Quiz;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.jshi.laughtale.quiz.domain.Quiz;
+import java.util.List;
 
-public interface QuizRepository extends JpaRepository<Quiz,Long> {
-	List<Quiz> findAllByMemberIdOrderByProblemNoAsc(Long memberId);
+public interface QuizRepository extends JpaRepository<Quiz, Long> {
+    List<Quiz> findAllByMemberIdOrderByProblemNoAsc(Long memberId);
 
 }
