@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:346570a8803e250099c3dcd9895f3a06c4c512cbb4539c5de8661aa8d6e12307
-size 432
+package com.jshi.laughtale.cut.repository;
+
+
+import com.jshi.laughtale.chapter.domain.Chapter;
+import com.jshi.laughtale.cut.domain.Cut;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+
+public interface CutRepository extends JpaRepository<Cut, Long> {
+    Page<Cut> findAllByChapter(Chapter chapter, Pageable pageable);
+}
+
