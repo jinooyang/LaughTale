@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e11a0b6a925fe90ac08ebe976683458d7f4aa3100e4ee8905150b934205ac3a5
-size 435
+package com.jshi.laughtale.member.repository;
+
+import com.jshi.laughtale.member.domain.Member;
+import com.jshi.laughtale.member.domain.Provider;
+import java.util.Optional;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface MemberRepository extends JpaRepository<Member, Long> {
+    Optional<Member> findByEmail(String email);
+    Optional<Member> findByEmailAndProvider(String email, Provider provider);
+}
