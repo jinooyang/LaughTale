@@ -1,10 +1,3 @@
-package com.jshi.laughtale.speech.repository;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.jshi.laughtale.speech.domain.Speech;
-
-import java.util.Optional;
-
-public interface SpeechRepository extends JpaRepository<Speech,Long> {
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1ed821f81d80f6fc57ddd443e7459769a5857d5d4a90590506abe0184587297d
+size 232

@@ -1,25 +1,3 @@
-package com.jshi.laughtale.manga.dto;
-
-import lombok.Builder;
-import lombok.Getter;
-
-public class MangaInfo {
-	@Getter
-	@Builder
-	public static class Request {
-
-	}
-
-	@Getter
-	@Builder
-	public static class Response {
-		Long id;
-		String title;
-		String category;
-		String author;
-		String summary;
-		String thumbnail;
-		Integer level;
-
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c978a1f2de3c0edc243479748ae68cd0cbb967c4ad8203f8de3457a483d914f5
+size 406
