@@ -1,0 +1,13 @@
+/* Tailwind CSS Scrollbar Styling */
+::-webkit-scrollbar {
+    @apply w-2;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-blue-500 hover:bg-blue-700;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+}
