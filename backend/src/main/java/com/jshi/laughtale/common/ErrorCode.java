@@ -1,20 +1,3 @@
-package com.jshi.laughtale.common;
-
-import static org.springframework.http.HttpStatus.BAD_REQUEST;
-
-import lombok.Getter;
-import org.springframework.http.HttpStatus;
-
-@Getter
-public enum ErrorCode {
-    MEMBER_NOT_FOUND(BAD_REQUEST, "MEMBER_NOT_FOUND"),
-    PASSWORD_NOT_MATCHES(BAD_REQUEST, "PASSWORD NOT MATCH");
-
-    private final HttpStatus status;
-    private final String message;
-
-    ErrorCode(HttpStatus status, String message) {
-        this.status = status;
-        this.message = message;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8fbb152de433e8cd2f8e1600480ed2176141fc451d751fd15ef6cde885999420
+size 1077
