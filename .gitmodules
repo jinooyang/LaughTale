@@ -1,0 +1,3 @@
+[submodule "manga-python/comic-text-detector"]
+	path = manga-python/comic-text-detector
+	url = https://github.com/kha-white/comic-text-detector
