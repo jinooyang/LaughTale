@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:44786371be4b9b33db01a24740344811e88f556097f615af624dc42b1a0635e2
-size 370
+package com.jshi.laughtale.security;
+
+public enum Role {
+
+    ROLE_USER("USER"),
+    ROLE_TEMPORARY_USER("TEMPORARY_USER"),
+    ROLE_ADMIN("ADMIN");
+
+    private final String role;
+
+    Role(String role) {
+        this.role = role;
+    }
+
+    public String value() {
+        return role;
+    }
+
+    @Override
+    public String toString() {
+        return name();
+    }
+}
