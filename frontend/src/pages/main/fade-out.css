@@ -1,27 +1,3 @@
-@keyframes fade-out {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-.fade-out {
-    animation: fade-out 3s;
-}
-
-
-@keyframes fadeInUp {
-    0% {
-        transform: translateY(100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0%);
-        opacity: 1;
-    }
-}
-
-.fadeInUp-animation {
-    animation: 1.5s fadeInUp;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d5d82ee1c4bd46086a50a0f01107879481d4f3a33ecdecd434e08e92785a94b8
+size 716

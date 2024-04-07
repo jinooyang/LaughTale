@@ -1,13 +1,3 @@
-import {useAuth} from "../stores/useAuth";
-import {Navigate, Outlet} from "react-router-dom";
-import {Role} from "../constants/Role.ts";
-type Props = {
-  roles: Array<Role>
-}
-
-const AuthRoute = (props: Props) => {
-  const user = useAuth((state) => state.user);
-  const token = useAuth((state) => state.token);
-  return props?.roles.includes(user?.role) ? <Outlet/> : <Navigate to="/home" />
-}
-export default AuthRoute;
+version https://git-lfs.github.com/spec/v1
+oid sha256:87340a0426f19cc29c3b73bc9455ea9261061d9c41467306a6524215abd50c12
+size 725
