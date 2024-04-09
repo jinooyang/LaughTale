@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f576b858e1ad658d8bb9633a183f63e795e5da2ec09f8904d9c607806a80491e
-size 426
+import {ReactNode, useEffect} from "react";
+import {ThemeProvider} from "@material-tailwind/react";
+import children = ThemeProvider.propTypes.children;
+
+type Props = {
+  children: ReactNode;
+}
+export default function WordListWrapper(props:Props){
+
+  useEffect(() => {
+
+  }, []);
+  return <div className="pl-5 pr-5 break-all overflow-auto sticky top-[70px] pb-5 " style={{maxHeight: "100vh"}}>
+      {props.children}
+  </div>
+}

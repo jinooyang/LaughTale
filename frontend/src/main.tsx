@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:97f2bc3b23c13755d865cf77105cdd2f51d05b296ad4f755376f97d4142a731f
-size 379
+import ReactDOM from 'react-dom/client'
+import { RouterProvider } from "react-router-dom";
+import router from "./routes";
+import "./index.css"
+import './styles/SliderStyles.css';
+import './styles/fontstyle.css';
+import { QueryClient } from '@tanstack/react-query';
+import App from "./App.tsx";
+
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(<App/>);

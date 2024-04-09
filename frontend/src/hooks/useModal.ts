@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a8f32554f573b1e2149ce0ae85e2dae11456101d4e762baea860b885ca585cc6
-size 295
+import { create } from 'zustand'
+
+type ModalStore = {
+  isOpen: boolean;
+  toggle: () => void;
+}
+
+const useModal = create<ModalStore>((set) => ({
+  isOpen: false,
+  toggle: () => set(state =>{
+    console.log(state.isOpen)
+    return {isOpen: !state.isOpen }
+  })
+
+}))
+
+
+export default useModal;
