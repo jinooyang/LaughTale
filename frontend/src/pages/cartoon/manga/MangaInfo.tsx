@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1e3420a509a8176387b017459e720fccab74f0570f13c3b7cd3068e5d6373a10
-size 614
+
+import CartoonHeader from "../../../components/cartoon/CartoonHeader.tsx";
+
+
+type Props = {
+  mangaId:number;
+}
+export default function MagaInfo(props: Props){
+  const {mangaId} = props;
+  // const {data, isLoading} = useSuspenseQuery({
+  //   queryKey: ["mangaInfo", mangaId],
+  //   queryFn: () => getMangaInfo(+ mangaId),
+  //   retry:0
+  // });
+  // if(data){
+  //   console.log("cache " , data);
+  // }
+  return (
+    // <MangaInfoFetchingSuspense>
+    //   <MangaInfoFetcher mangaId={mangaId}>
+        <CartoonHeader mangaId={mangaId}/>
+    //   </MangaInfoFetcher>
+    // </MangaInfoFetchingSuspense>
+  )
+}

@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b934fcb55b5c08dbb5bbcc603b21e7848ea4cc9c9043096ac88a65abd2428686
-size 694
+package com.jshi.laughtale.cut.dto;
+
+import com.jshi.laughtale.position.domain.Position;
+import lombok.Builder;
+import lombok.Getter;
+
+import java.util.List;
+
+public class View {
+    @Getter
+    @Builder
+    public static class CutSpeech {
+        private Long id;
+        private String sentence;
+        private Position position;
+
+    }
+
+    @Getter
+    public static class Request {
+
+        private Long chapterId;
+        private Integer page;
+        private Integer size;
+    }
+
+    @Getter
+    @Builder
+    public static class Response {
+        private String imageUrl;
+        private Integer width;
+        private Integer height;
+        private List<CutSpeech> speeches;
+    }
+
+}

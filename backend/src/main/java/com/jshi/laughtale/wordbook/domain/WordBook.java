@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:430d4e43a04557aa2bafe80bd9f6ae4ea51946de00ad02197486cce3c5adbb72
-size 558
+package com.jshi.laughtale.wordbook.domain;
+
+import com.jshi.laughtale.member.domain.Member;
+import com.jshi.laughtale.worddata.domain.WordData;
+import jakarta.persistence.*;
+import lombok.*;
+
+@AllArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Builder
+@Entity
+@Getter
+public class WordBook {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    @ManyToOne
+    @JoinColumn(name = "member_id")
+    private Member member;
+    @ManyToOne
+    @JoinColumn(name = "word_id")
+    private WordData wordData;
+}

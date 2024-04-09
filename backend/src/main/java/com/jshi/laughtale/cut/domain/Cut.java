@@ -1,3 +1,37 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ff395781b82e0ac4541be1a50619032732c635123d6c3e224918990f3583bd75
-size 855
+package com.jshi.laughtale.cut.domain;
+
+import com.jshi.laughtale.chapter.domain.Chapter;
+import com.jshi.laughtale.speech.domain.Speech;
+import jakarta.persistence.*;
+import lombok.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@AllArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Builder
+@Entity
+@Getter
+public class Cut {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    @Column
+    private Integer cutNo;
+    @Column(length = 3000)
+    private String imageUrl;
+    @Column
+    private Integer width;
+    @Column
+    private Integer height;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "chapter_id")
+    @Setter
+    private Chapter chapter;
+
+    @OneToMany(mappedBy = "cut", orphanRemoval = true)
+    @Setter
+    private List<Speech> speeches = new ArrayList<>();
+}

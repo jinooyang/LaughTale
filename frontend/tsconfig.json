@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9cc1fe8d42b0e4d4ba0b999906686fab45aaea3136df7baafd678e6b8315b70d
-size 1247
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+//    "strict": false,
+//    "noUnusedLocals": false,
+//    "noUnusedParameters": false,
+//    "noFallthroughCasesInSwitch": true,
+//    "noImplicitAny": false,
+
+    "strict": false, //strict 관련, noimplicit 어쩌구 관련 모드 전부 켜기
+    "noImplicitAny": false, //any타입 금지 여부
+    "strictNullChecks": false, //null, undefined 타입에 이상한 짓 할시 에러내기
+    "strictFunctionTypes": false, //함수파라미터 타입체크 강하게
+    "strictPropertyInitialization": false, //class constructor 작성시 타입체크 강하게
+    "noImplicitThis": false, //this 키워드가 any 타입일 경우 에러내기
+    "alwaysStrict": false, //자바스크립트 "use strict" 모드 켜기
+
+    "typeRoots": ["./types"],
+
+
+  },
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

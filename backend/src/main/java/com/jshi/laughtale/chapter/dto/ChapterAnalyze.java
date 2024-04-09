@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3b86736bc368bd20fe10da9e4a786f14d0c03fa573b90d0aa503a2f63c894968
-size 571
+package com.jshi.laughtale.chapter.dto;
+
+import com.jshi.laughtale.cut.dto.CutAnalyze;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.util.List;
+
+public class ChapterAnalyze {
+
+    @Getter
+    public static class Response {
+        private Integer chapterNo;
+        @Setter
+        private Integer level;
+        @Setter
+        private List<CutAnalyze.Response> cuts;
+
+        @Builder
+        public Response(Integer chapterNo, Integer level) {
+            this.chapterNo = chapterNo;
+            this.level = level;
+        }
+    }
+}

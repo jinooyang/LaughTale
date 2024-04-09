@@ -1,3 +1,39 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b67c1acdc94a56d8b5aed29beee673cebd9f48231a178a905131a80d67d884eb
-size 843
+package com.jshi.laughtale.member.domain;
+
+import com.jshi.laughtale.security.Role;
+import jakarta.persistence.*;
+import lombok.*;
+
+@AllArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Builder
+@Entity
+@Getter
+public class Member {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    @Column
+    private Provider provider = Provider.SELF;
+    @Column
+    private String password;
+    @Column(unique = true)
+    private String email;
+    @Column
+    private String nickname;
+    @Column
+    private Role role;
+
+    public void updatePassword(String password) {
+        this.password = password;
+    }
+
+    public Member updateNickname(String nickname) {
+        this.nickname = nickname;
+        return this;
+    }
+
+    public void updateRole(Role role) {
+        this.role = role;
+    }
+}

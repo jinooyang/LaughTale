@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:07b9f859806be5b66ab988c032f652fac0c575aa474bfa2dfbd44b3fd7bcf499
-size 591
+import LoginFetchingSuspense from "./LoginFetchingSuspense.tsx";
+import {ErrorBoundary} from "react-error-boundary";
+import UserInfoFetcher from "./UserInfoFetcher.tsx";
+import ErrorPage from "../error/Index.tsx";
+
+type Props ={
+  accessToken:string;
+}
+const LoginPostProcessComponent = ({accessToken} : Props) => {
+  return (
+    <ErrorBoundary fallbackRender={(error) => {
+      return <ErrorPage/>
+    }}>
+      <LoginFetchingSuspense>
+        <UserInfoFetcher accessToken={accessToken}/>
+      </LoginFetchingSuspense>
+    </ErrorBoundary>
+  )
+}
+export default LoginPostProcessComponent;

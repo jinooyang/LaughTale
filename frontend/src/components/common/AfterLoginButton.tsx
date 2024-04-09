@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:104576f89acf8abbe3c80d240319fb83ecbe1adf848338c27248b71f59f6c502
-size 826
+import {Navigate, NavLink, useNavigate} from "react-router-dom";
+import {useAuth} from "../../stores/useAuth.ts";
+import {useCallback} from "react";
+
+export default function AfterLoginButton() {
+    const navigate = useNavigate();
+    const clear = useAuth((state) => state.clear);
+    const logout = () => {
+        clear();
+        navigate("/home");
+    }
+    return (
+        <>
+            <div className="flex justify-end">
+                <div className="mr-10 text-3xl hover:text-blue-200">
+                    <NavLink to="/mypage">マイページ : 마이페이지</NavLink>
+                </div>
+
+                <div className="text-3xl hover:text-blue-200 hover:cursor-pointer" onClick={() => logout()}>
+                    ログアウト : 로그아웃
+                </div>
+            </div>
+        </>)
+}

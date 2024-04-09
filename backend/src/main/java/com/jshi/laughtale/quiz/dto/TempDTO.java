@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d7a485b26710df82eccf340d0dd6ac20319ded767e1e134243677cfad9d8a3b4
-size 574
+package com.jshi.laughtale.quiz.dto;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class TempDTO {
+    private Long wordDataId;
+    private String answerWord;
+    private Integer level;
+    private Long wordListId;
+    private Long speechId;
+
+    // Constructor
+    public TempDTO(Long wordDataId, String answerWord, Integer level, Long wordListId, Long speechId) {
+        this.wordDataId = wordDataId;
+        this.answerWord = answerWord;
+        this.level = level;
+        this.wordListId = wordListId;
+        this.speechId = speechId;
+    }
+
+}

@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0b22031be7f101afc8814a6b3c28333b0eb65bcb624022ade001777f380d07ef
-size 539
+import {Position, SpeechBubble} from "../../../types";
+import absoluteToPercent from "../../utils/position.ts";
+type Pos = {
+  x: number;
+  y: number;
+}
+type Props ={
+  leftTop: Pos;
+  rightBottom :Pos;
+  onClick: Function;
+}
+
+export default function SpeechBubbleBox(props : Props){
+
+  return <div className="hoverBox" onClick={() =>props.onClick()} style={{
+    position: "absolute",
+    left: `${props.leftTop.x}%`,
+    top: `${props.leftTop.y}%`,
+    right: `${props.rightBottom.x}%`,
+    bottom: `${props.rightBottom.y}%`
+  }}></div>
+}

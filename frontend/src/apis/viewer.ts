@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7a02fb0a7b537126875cab9b9f732c3cda2522d13fae11e00dbf3d129665cfbb
-size 514
+import client from "./index.ts";
+import {MangaImageResponse} from "../../types";
+
+
+export type CutImageRequest = {
+  chapterId: number,
+  page:number,
+  size: number
+}
+export const getImageByChapterId = async (d: CutImageRequest):Promise<MangaImageResponse>   => {
+  const { data } =  await client.post<MangaImageResponse>(`/cut/images`, d, {
+    headers:{
+      "Content-Type":"application/json"
+    }
+  });
+  return data;
+}
+
+export const addWordList = (id:number) => {
+  return client.post(`/word-book/${id}`);
+}

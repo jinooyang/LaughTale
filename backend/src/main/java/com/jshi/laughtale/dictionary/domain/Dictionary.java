@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fb2e26b9317aa88749c6083b9704a154b08c527c4e5ac59febe7155675435e0f
-size 647
+package com.jshi.laughtale.dictionary.domain;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@AllArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Builder
+@Entity
+@Getter
+public class Dictionary {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	@Column
+	private String japWord;
+
+	@Column
+	private String definition;
+}

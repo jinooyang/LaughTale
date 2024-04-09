@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8bf7e5baa7fd7d797b35af8acde621f8e3eac05b3acb45188e0032d8d5506cdc
-size 778
+package com.jshi.laughtale.chapter.domain;
+
+import com.jshi.laughtale.cut.domain.Cut;
+import com.jshi.laughtale.manga.domain.Manga;
+import jakarta.persistence.*;
+import lombok.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@AllArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Builder
+@Entity
+@Getter
+@Setter
+public class Chapter {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    @Column
+    private Integer chapterNo;
+    @Column
+    private Integer pageCnt;
+    @Column
+    private Integer level;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "manga_id")
+    private Manga manga;
+
+    @OneToMany(mappedBy = "chapter", orphanRemoval = true)
+    private List<Cut> cuts = new ArrayList<>();
+
+}

@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6ba59356577fa1cc78ae432c74d7b65909558d8daa2261969fa49c1cce263c3b
-size 734
+package com.jshi.laughtale.cut.service;
+
+import com.jshi.laughtale.chapter.service.ChapterService;
+import com.jshi.laughtale.cut.domain.Cut;
+import com.jshi.laughtale.cut.repository.CutRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.stereotype.Service;
+
+@Service
+@RequiredArgsConstructor
+public class CutService {
+    private final CutRepository cutRepository;
+    private final ChapterService chapterService;
+
+    public Page<Cut> findCutsByChapter(Long chapterId, int page, int size) {
+        return cutRepository.findAllByChapter(chapterService.findById(chapterId), PageRequest.of(page, size));
+    }
+}

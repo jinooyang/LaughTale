@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:442f2993b5db6cb8617038ceeb24a2ae3842fc15ae053ac9f8647f2f20ebbcce
-size 630
+import {WordAnalyze} from "../../../types";
+
+export default function WordResult({props, color}: { props: WordAnalyze, color: string }) {
+    if (props === null || props === undefined) {
+        return <div className="font-bold">인식된 단어가 없습니다.</div>;
+    }
+
+    return (
+        <div className="grid grid-cols-1 mb-2">
+            <div className="font-bold">단어 :
+                <span style={{background: color}}>{props.word}</span>
+                <span> 난이도 : {props.level}</span>
+            </div>
+            <div dangerouslySetInnerHTML={{__html: props.definition}}></div>
+        </div>
+    );
+}

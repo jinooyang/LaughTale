@@ -1,3 +1,42 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:43689a4b8626473f321d7564df5b6241a0821351c6129b2482bc15502227d08a
-size 1126
+package com.jshi.laughtale.security.oauth2;
+
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.oauth2.core.user.OAuth2User;
+
+import java.util.Collection;
+import java.util.Map;
+
+public class OAuth2UserPrincipal implements OAuth2User {
+    private UserInfo userInfo;
+    private String name;
+    private Map<String, Object> attributes;
+    private Collection<? extends GrantedAuthority> authorities;
+
+    public OAuth2UserPrincipal(UserInfo userInfo, String name, Map<String, Object> attributes,
+                               Collection<? extends GrantedAuthority> authorities) {
+        this.userInfo = userInfo;
+        this.name = name;
+        this.attributes = attributes;
+        this.authorities = authorities;
+    }
+
+    public UserInfo getUserInfo() {
+        return userInfo;
+    }
+
+    @Override
+    public Map<String, Object> getAttributes() {
+        return attributes;
+    }
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return authorities;
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+}

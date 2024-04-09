@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2e6ad1335669e7590d10fe7b7ba1f5023828e10300e1606d65676f94b80f9ddd
-size 565
+import { Component } from 'react';
+import Chart from 'react-apexcharts'
+
+class ScatterChart extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            options: {},
+            series: [44, 55, 41, 17, 15],
+            labels: ['A', 'B', 'C', 'D', 'E']
+        }
+    }
+
+    render() {
+
+        return (
+            <div className="donut">
+                <Chart options={this.state["options"]} series={this.state["series"]} type="scatter" width="380" />
+            </div>
+        );
+    }
+}
+
+export default ScatterChart;

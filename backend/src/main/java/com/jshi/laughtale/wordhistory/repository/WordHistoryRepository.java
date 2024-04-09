@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d68c1dc6f64762fca26f7ab6415238b95421d17061faa6fd7dc30db68675ad31
-size 597
+package com.jshi.laughtale.wordhistory.repository;
+
+import com.jshi.laughtale.wordhistory.domain.WordHistory;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+import java.util.Optional;
+
+public interface WordHistoryRepository extends JpaRepository<WordHistory, Long> {
+    List<WordHistory> findByMemberId(Long memberId);
+
+    List<WordHistory> findAllByWordDataIdIn(List<Long> list);
+
+    Optional<WordHistory> findByMemberIdAndWordDataId(Long memberId, Long wordDataId);
+
+    List<WordHistory> findByMemberIdAndStudyCntGreaterThan(Long memberId, int num);
+}

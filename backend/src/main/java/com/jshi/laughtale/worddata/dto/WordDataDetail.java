@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c5e209b5aec29fcf0df10f079b2ffea61735892736451743869e5898a5841e51
-size 571
+package com.jshi.laughtale.worddata.dto;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.jshi.laughtale.speech.dto.SpeechBasic;
+import lombok.Builder;
+import lombok.Getter;
+
+import java.util.List;
+
+public class WordDataDetail {
+
+    @Builder
+    @Getter
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public static class Response {
+        private Long id;
+        private String word;
+        private String definition;
+        private String partOfSpeech;
+        private Integer level;
+        private List<SpeechBasic.Response> speeches;
+    }
+}

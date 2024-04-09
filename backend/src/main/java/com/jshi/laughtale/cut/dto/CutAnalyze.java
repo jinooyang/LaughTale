@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:96efc5a7e00d9add12c631244065499a8efaf9b0baaae6293360ad753a6d0950
-size 634
+package com.jshi.laughtale.cut.dto;
+
+import com.jshi.laughtale.speech.dto.SpeechDetail;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.util.List;
+
+public class CutAnalyze {
+
+    @Getter
+    public static class Response {
+        private String imageUrl;
+        private Integer width;
+        private Integer height;
+        @Setter
+        private List<SpeechDetail.Response> sentence;
+
+        @Builder
+        public Response(String imageUrl, Integer width, Integer height) {
+            this.imageUrl = imageUrl;
+            this.width = width;
+            this.height = height;
+        }
+    }
+}

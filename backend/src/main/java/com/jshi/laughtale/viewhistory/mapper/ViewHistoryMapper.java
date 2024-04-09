@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8461d7afcd36994bb87d12ab6e81be828c1218c2bd00f9ee78bc84d01758445e
-size 618
+package com.jshi.laughtale.viewhistory.mapper;
+
+import com.jshi.laughtale.chapter.domain.Chapter;
+import com.jshi.laughtale.manga.domain.Manga;
+import com.jshi.laughtale.member.domain.Member;
+import com.jshi.laughtale.viewhistory.domain.ViewHistory;
+
+import java.time.LocalDateTime;
+
+public class ViewHistoryMapper {
+
+    public static ViewHistory toEntity(Member member, Manga manga, Chapter chapter) {
+        return ViewHistory.builder()
+                .member(member)
+                .manga(manga)
+                .chapter(chapter)
+                .viewDate(LocalDateTime.now())
+                .build();
+    }
+}
